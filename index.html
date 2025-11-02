@@ -4,125 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SwiftHire - Desktop App</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .header {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .header h1 {
-            color: white;
-            font-size: 2.5em;
-            font-weight: 300;
-            margin-bottom: 10px;
-        }
-
-        .header p {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1.1em;
-        }
-
-        .main-content {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px;
-        }
-
-        .welcome-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            width: 100%;
-        }
-
-        .welcome-card h2 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-        }
-
-        .welcome-card p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 25px;
-            font-size: 1em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin: 0 10px;
-        }
-
-        .button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .button:active {
-            transform: translateY(0);
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .feature {
-            background: rgba(102, 126, 234, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .feature h3 {
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-
-        .feature p {
-            color: #666;
-            font-size: 0.9em;
-        }
-
-        .footer {
-            background: rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.8);
-            text-align: center;
-            padding: 15px;
-            font-size: 0.9em;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="header">
@@ -134,7 +16,7 @@
         <div class="welcome-card">
             <h2>Welcome to SwiftHire Desktop</h2>
             <p>A powerful desktop application for streamlined hiring and recruitment processes. Get started by exploring the features below.</p>
-            
+
             <button class="button" onclick="showAlert()">Get Started</button>
             <button class="button" onclick="openDevTools()">Developer Tools</button>
 
@@ -159,23 +41,6 @@
         <p>SwiftHire Desktop v1.0.0 - Built with Electron</p>
     </div>
 
-    <script>
-        function showAlert() {
-            alert('Welcome to SwiftHire Desktop! Ready to start hiring efficiently.');
-        }
-
-        function openDevTools() {
-            const { remote } = require('electron');
-            if (remote) {
-                remote.getCurrentWindow().webContents.openDevTools();
-            }
-        }
-
-        // Log app info when loaded
-        console.log('SwiftHire Desktop App Loaded Successfully!');
-        console.log('Electron Version:', process.versions.electron);
-        console.log('Node Version:', process.versions.node);
-        console.log('Chrome Version:', process.versions.chrome);
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
