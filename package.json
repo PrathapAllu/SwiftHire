@@ -1,0 +1,27 @@
+{
+  "name": "swifthire",
+  "version": "1.0.0",
+  "description": "SwiftHire Desktop - A powerful hiring and recruitment desktop application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "NODE_ENV=development electron .",
+    "build": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrathapAllu/SwiftHire.git"
+  },
+  "keywords": ["electron", "desktop", "hiring", "recruitment", "swifthire"],
+  "author": "PrathapAllu",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/PrathapAllu/SwiftHire/issues"
+  },
+  "homepage": "https://github.com/PrathapAllu/SwiftHire#readme",
+  "devDependencies": {
+    "electron": "^39.0.0"
+  }
+}
