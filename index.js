@@ -3,6 +3,9 @@ const statusText = document.getElementById('statusText');
 const actionButton = document.getElementById('actionButton');
 const homeButton = document.getElementById('homeButton');
 
+const { Desktop } = require('terminator.js');
+const desktop = new Desktop();
+
 let currentState = 'idle'; // idle, connected, disconnected
 
 function updateUI(state) {
@@ -33,9 +36,15 @@ function updateUI(state) {
     }
 }
 
-actionButton.addEventListener('click', () => {
+actionButton.addEventListener('click', async () => {
     if (currentState === 'idle') {
         // Start connecting
+        try {
+            await desktop.openApplication('chrome');
+            await desktop.openUrl('https://linkedin.com');
+        } catch (error) {
+            console.error('Automation failed:', error);
+        }
         currentState = 'connected';
         updateUI('connected');
     } else if (currentState === 'connected') {
