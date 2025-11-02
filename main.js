@@ -7,13 +7,13 @@ let mainWindow;
 function createWindow() {
   // Create the browser window
   mainWindow = new BrowserWindow({
-    width: 1200,
-    height: 800,
+    width: 350,
+    height: 400,
+    resizable: false,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
     },
-    icon: path.join(__dirname, 'assets/icon.png'), // Optional: Add an icon
     show: false // Don't show until ready
   });
 

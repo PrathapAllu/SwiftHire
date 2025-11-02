@@ -7,38 +7,16 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="header">
-        <h1>SwiftHire</h1>
-        <p>Your Desktop Hiring Solution</p>
-    </div>
+    <button class="home-button" id="homeButton">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 12L5 10M5 10L12 3L19 10M5 10V20C5 20.5523 5.44772 21 6 21H9M19 10L21 12M19 10V20C19 20.5523 18.5523 21 18 21H15M9 21V15C9 14.4477 9.44772 14 10 14H14C14.5523 14 15 14.4477 15 15V21M9 21H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
 
-    <div class="main-content">
-        <div class="welcome-card">
-            <h2>Welcome to SwiftHire Desktop</h2>
-            <p>A powerful desktop application for streamlined hiring and recruitment processes. Get started by exploring the features below.</p>
-
-            <button class="button" onclick="showAlert()">Get Started</button>
-            <button class="button" onclick="openDevTools()">Developer Tools</button>
-
-            <div class="features">
-                <div class="feature">
-                    <h3>Fast Hiring</h3>
-                    <p>Streamline your recruitment process</p>
-                </div>
-                <div class="feature">
-                    <h3>Desktop Native</h3>
-                    <p>Built with Electron for cross-platform support</p>
-                </div>
-                <div class="feature">
-                    <h3>Modern UI</h3>
-                    <p>Clean and intuitive user interface</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>SwiftHire Desktop v1.0.0 - Built with Electron</p>
+    <div class="container">
+        <div class="status-indicator" id="statusIndicator"></div>
+        <div class="status-text" id="statusText">Idle</div>
+        <button class="action-button" id="actionButton">Start</button>
     </div>
 
     <script src="index.js"></script>
